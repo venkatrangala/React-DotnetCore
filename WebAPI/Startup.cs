@@ -37,6 +37,17 @@ namespace WebApi
             //services.AddDbContext<DonationDBContext>(options =>
             //options.UseSqlServer(_configuration.GetConnectionString("DevConnection")));
 
+            // Add API Versioning to as service to your project 
+            services.AddApiVersioning(config =>
+            {
+                // Specify the default API Version
+                config.DefaultApiVersion = new ApiVersion(1, 0);
+                // If the client hasn't specified the API version in the request, use the default API version number 
+                config.AssumeDefaultVersionWhenUnspecified = true;
+                // Advertise the API versions supported for the particular endpoint
+                config.ReportApiVersions = true;
+            });
+
             services.AddDbContext<DataContext>();
             services.AddCors();
             services.AddControllers();
