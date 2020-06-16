@@ -22,5 +22,8 @@ namespace WebApi.Helpers
         public DbSet<User> Users { get; set; }
 
         public DbSet<Candidate> Candidates { get; set; }
+
+        public DbSet<Guest> Guests { get; set; }
+
     }
 }

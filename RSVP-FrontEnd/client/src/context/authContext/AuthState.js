@@ -25,7 +25,6 @@ const AuthState = (props) => {
 	const [ state, dispatch ] = useReducer(authReducer, intialState);
 
 	// Load User
-
 	const loadUser = async () => {
 		if (localStorage.token) {
 			setAuthToken(localStorage.token);
@@ -74,7 +73,6 @@ const AuthState = (props) => {
 	};
 
 	//login user
-
 	const login = async (formData) => {
 		const config = {
 			header: {
@@ -101,6 +99,7 @@ const AuthState = (props) => {
 			payload: [ { msg: err } ]
 		});
 	};
+
 	// Logout
 	const logout = () => dispatch({ type: LOGOUT });
 

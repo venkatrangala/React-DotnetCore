@@ -100,6 +100,7 @@ namespace WebApi
 
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();
+            //services.AddScoped<IGuestService, GuestService>();
             services.AddScoped<ICandidateService, CandidateService>();
         }
 

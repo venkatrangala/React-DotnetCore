@@ -13,6 +13,7 @@ namespace WebApi.Helpers
             CreateMap<User, GuestModel>();
             CreateMap<RegisterModel, User>();
             CreateMap<UpdateModel, User>();
+            CreateMap<GuestModel, Guest>();
 
             CreateMap<DCandidate, Candidate>();
             CreateMap<Candidate, DCandidate>();
